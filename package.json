@@ -3,7 +3,7 @@
   "version": "0.1.4",
   "author": "aiyk <aiyk.ekwe@gmail.com>",
   "license": "MIT",
-  "main": "./dist/data-table.common.js",
+  "main": "./dist/awc-table.common.js",
   "files": [
     "dist/*",
     "src/*",
@@ -15,7 +15,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "build-bundle": "vue-cli-service build --target lib --name data-table ./src/main.js",
+    "build-bundle": "vue-cli-service build --target lib --name awc-table ./src/main.js",
     "wc-build": "vue-cli-service build --target wc --name awc-custom-table ./src/main.js"
   },
   "dependencies": {
