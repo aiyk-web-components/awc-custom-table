@@ -150,6 +150,7 @@
 <script>
 import Pagination from "./components/Pagination.vue";
 import Modal from "./components/Modal.vue";
+require("./style.scss");
 
 export default {
   mounted() {
