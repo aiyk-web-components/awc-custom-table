@@ -9,13 +9,17 @@ Whilst ensuring that this project is complex enough to carter for every table or
 #### Installation
 To setup this project on your local mechine;
 
-run `git clone https://github.com/aiyk/vue-data-table.git` to clone the repository unto your mechine
+```javascript
+<!--Load Vue-->
+<script src="https://unpkg.com/vue"></script>
+<!--Load the web component polyfill-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/webcomponents-loader.js"></script>
+<!--Load awc custom table-->
+<script src="./awc-custom-table.min.js"></script>
+<!--Use your custom table-->
+<awc-custom-table collections="dataset"></awc-custom-table>
+```
 
-`cd vue-data-table`
-
-`npm install`
-
-finally run the command `npm run dev` to serve the application. Once served, the application loads up with some dummy data loaded from a firebase database, this gives you a basic idea of what to expect.
 
 #### Setting up your data source
 In other to reuse for your specific needs, all you need do is to point the table to your data source or even better, your vuex store. This can be done by passing any javascript object or json type data into the table via props.
