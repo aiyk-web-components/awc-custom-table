@@ -1,8 +1,11 @@
-import Vue from 'vue'
-import AwcTable from "./AwcTable.vue";
+import Vue from 'vue';
+import wrap from '@vue/web-component-wrapper';
+import AwcCustomTable from "./AwcCustomTable.vue";
 
+const CustomElement = wrap(Vue, AwcCustomTable);
+window.customElements.define('awc-custom-table', CustomElement);
 Vue.config.productionTip = false
 
 new Vue({
-  render: h => h(AwcTable),
+  render: h => h(AwcCustomTable),
 }).$mount('#app')
