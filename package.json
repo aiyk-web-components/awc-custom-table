@@ -3,7 +3,7 @@
   "version": "0.1.2",
   "author": "aiyk <aiyk.ekwe@gmail.com>",
   "license": "MIT",
-  "main": "./dist/awc-table.common.js",
+  "main": "./dist/data-table.common.js",
   "files": [
     "dist/*",
     "src/*",
