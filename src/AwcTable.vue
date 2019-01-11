@@ -18,12 +18,7 @@
           <select v-model="searchKey">
             <option v-for="key in getCollections_keys" v-bind:key="key">{{key}}</option>
           </select>
-          <input
-            @change="loadedCollection($event)"
-            v-model="search"
-            type="search"
-            placeholder="search..."
-          >
+          <input v-model="search" type="search" placeholder="search...">
         </div>
         <pagination v-bind:collection="loadedCollection" v-bind:pagination_data="pagination_data"/>
       </div>
@@ -222,7 +217,8 @@ export default {
         open: false,
         modalTitle: "New Data Entry"
       },
-      sortState: true
+      sortState: true,
+      getdata: null
     };
   },
   methods: {
@@ -294,6 +290,16 @@ export default {
           return 0;
         });
       }
+    },
+
+    filter: function() {
+      const search_criteria = this.search.toLowerCase();
+      this.getdata = this.collections.filter(item => {
+        if (item[this.searchKey]) {
+          const to_compare = item[this.searchKey].toLowerCase();
+          return to_compare.includes(search_criteria);
+        }
+      });
     }
   },
   computed: {
@@ -307,17 +313,11 @@ export default {
       return null;
     },
     loadedCollection: function() {
-      let getdata = this.collections;
       const _this = this;
+      _this.getdata = this.collections;
 
-      if (this.search) {
-        const search_criteria = this.search.toLowerCase();
-        getdata = this.collections.filter(item => {
-          if (item[this.search_key]) {
-            const to_compare = item[this.search_key].toLowerCase();
-            return to_compare.includes(search_criteria);
-          }
-        });
+      if (this.search && this.searchKey) {
+        this.filter();
       }
 
       if (!this.pagination_data.currentPage) {
@@ -327,7 +327,7 @@ export default {
         _this.pagination_data.perPage = 5;
       }
       return this.paginate(
-        getdata,
+        this.getdata,
         _this.pagination_data.currentPage,
         _this.pagination_data.perPage
       );
