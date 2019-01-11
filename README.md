@@ -88,24 +88,23 @@ collections_keys: state => {
 }
 ```
 
-### Notes
+### Contributing
 
-#### For how long I worked on this component?
-Its really hard to measure since i worked along side this project three others all within the same season, but a rough estimate of say two weeks should do.
+1.    Fork it!
+2.    Create feature branch: `git checkout -b my-new-feature`
+3.    Commit your changes: `git commit -am 'Add some feature'`
+4.    Push to your branch: `git push origin my-new-feature`
+5.    Submit a pull request
 
-#### What I would do differently if i had more time?
-Alot actually, but for starters, I would build a proper rest API with Node js and not have to use firebase so as to be sure to simulate what a real life situation would look like.
+### License
+#### MIT
+================================================================================
 
-#### How I can Adapt my component for greater reusability?
-* [x] Deploy the component as an NPM package for ease of use as a dependency
-* [x] ensure that the table row action set is dynamically loaded and configurable
-* [x] bake into the component more filtering options based on the loaded data set
-* [x] add configuration meta data to every table data. this is so as to give the user the ability to set what actions can be carried out on each table data. A good example for this is how the user story clearly specified that the Admin should be able to edit payment details but said nothing about the others.
-* [x] improve on my unit test's coverage, especially component based tests
-* [x] include customizable theming so table can easily blend in
+Copyright 2019 aiyk web components
 
-#### My favorite css property?
-its definately css grid, reason being that with little effort, it gives an unlimited wealth of control with regards to positioning stuff. By the way, this component works mostly because of a few lines of css grid based style rules
 
-#### My favorite modern javascript feature?
-my favorite modern javascript feature will be the currying of unary functions which i refer to as the double arrowed function. 
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
