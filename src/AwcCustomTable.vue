@@ -150,7 +150,6 @@
 <script>
 import Pagination from "./components/Pagination.vue";
 import Modal from "./components/Modal.vue";
-require("./style.scss");
 
 export default {
   mounted() {
@@ -338,6 +337,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import "./style.scss";
 /*shadow rules*/
 .shadow {
   -webkit-box-shadow: 0 8px 16px rgba(148, 148, 148, 0.25);
