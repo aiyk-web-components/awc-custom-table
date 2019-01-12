@@ -1,6 +1,6 @@
 {
   "name": "awc-table",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "author": "aiyk <aiyk.ekwe@gmail.com>",
   "license": "MIT",
   "main": "./dist/awc-table.common.js",
