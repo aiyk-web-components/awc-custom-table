@@ -153,7 +153,7 @@ import Modal from "./components/Modal.vue";
 
 export default {
   mounted() {
-    // console.log(this.props);
+    console.log(this.props);
     if (this.props != undefined) {
       this.metaData = this.props.metaData;
       this.collections = this.props.collections;
